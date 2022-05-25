@@ -11,7 +11,7 @@
 
 
 class Node{
-  // initailizing the node (each node has a data, left node and right node)
+  // initializing the node (each node has a data, left node and right node)
   constructor(data){
       this.data = data;
       this.left = null;
@@ -41,7 +41,7 @@ class BinarySearchTree{
       }
   }
 
-  // helper recursive (private) method for adding a new node
+  // helper recursive method for adding a new node
   insertNode(node, newNode){
       if(newNode.data < node.data){
           
@@ -51,7 +51,7 @@ class BinarySearchTree{
               this.insertNode(node.left, newNode);
           }
 
-      }else{
+      }else {
 
           if(node.right === null){
               node.right = newNode;
@@ -79,7 +79,7 @@ class BinarySearchTree{
       
       }else if(data > node.data){
       
-          return this.search(node.right, data);
+          return this.searchNode(node.right, data);
       
       }else{
       
@@ -208,9 +208,9 @@ BST.insert(27);
 //    5   9  17
 
 let root = BST.getRoot();
-// console.log(JSON.stringify(root, null, 4));
+console.log(JSON.stringify(root, null, 4));
 // prints 5 7 9 10 13 15 17 22 25 27
-BST.inorder(root);
+// BST.inorder(root);
            
 // Removing node with no children
 // BST.remove(5);
@@ -225,13 +225,13 @@ BST.inorder(root);
 //        9  17
            
                        
-root = BST.getRoot();
+// root = BST.getRoot();
            
 // prints 7 9 10 13 15 17 22 25 27
 // BST.inorder(root);
            
 // Removing node with one child
-BST.remove(7);
+// BST.remove(7);
            
 //          15
 //         /  \
@@ -242,13 +242,13 @@ BST.remove(7);
 //           17
            
            
-root = BST.getRoot();
+// root = BST.getRoot();
 
 // prints 9 10 13 15 17 22 25 27
 // BST.inorder(root);
            
 // Removing node with two children
-BST.remove(15);
+// BST.remove(15);
 // console.dir(root);
    
 //          17
