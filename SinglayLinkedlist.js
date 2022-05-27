@@ -137,6 +137,14 @@ class SingleLinkedList {
       return undefined;
     }
 
+    if (index === 0) {
+      return this.shift();
+    }
+
+    if (index === this.length) {
+      return this.pop();
+    }
+
     let removedNode = null;
 
     if (this.length === 1) {
@@ -199,5 +207,14 @@ list.push(3);
 
 list.insert(0, 4);
 list.insert(4, 4);
+
+list.shift();
+
+list.unshift(100);
+
+list.pop();
+
+list.remove(0);
+list.remove(2);
 
 console.log(JSON.stringify(list, null, 4));
